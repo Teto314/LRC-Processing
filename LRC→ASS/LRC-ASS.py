@@ -118,8 +118,8 @@ def create_ass_header(metadata_assh):
     ass_header_main += "\n[V4+ Styles]\n"
     ass_header_main += "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
     ass_header_main += "Style: Title,Agency FB,120,&H00FFFFFF,&HF0FFFFFF,&H00000000,&HF0838383,0,0,0,0,115,100,2,0,1,0,0,2,1900,0,1500,1\n"
-    ass_header_main += "Style: LOL12CN,GenWanMin TW TTF Medium,90,&H00FFFFFF,&HF0FFFFFF,&H00000000,&HF0838383,0,0,0,0,100,100,2.5,0,1,0,0,8,1920,0,1640,134\n"
-    ass_header_main += "Style: LOL12JP,GenWanMin JP TTF Medium,90,&H00FFFFFF,&HF0FFFFFF,&H00000000,&HF0838383,0,0,0,0,100,100,2.5,0,1,0,0,8,1920,0,1475,128\n"
+    ass_header_main += "Style: LOL12CN,GenWanMin TW TTF Medium,90,&H00FFFFFF,&HF0FFFFFF,&H00000000,&HF0838383,0,0,0,0,100,100,2.5,0,1,0,0,8,1920,0,1640,1\n"
+    ass_header_main += "Style: LOL12JP,GenWanMin JP TTF Medium,90,&H00FFFFFF,&HF0FFFFFF,&H00000000,&HF0838383,0,0,0,0,100,100,2.5,0,1,0,0,8,1920,0,1475,1\n"
     ass_header_main += "Style: Script,Microsoft YaHei UI,85,&H00DFDDDD,&HF0FFFFFF,&H00000000,&HF0838383,0,-1,0,0,100,100,0,0,1,0,0,2,1920,0,190,1\n"
     ass_header_main += "Style: Script - s,Microsoft YaHei UI,85,&H00DFDDDD,&HF0FFFFFF,&H00000000,&HF0838383,-1,-1,0,0,100,100,0,0,1,0,0,2,1920,0,305,1\n"
 
