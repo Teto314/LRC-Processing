@@ -63,19 +63,16 @@ def parse_lrc_content(lrc_content_input):
     i = 0
     for line in lines:
         line = line.strip()  # 去除行首尾的空白字符
-        if line.startswith('[') and line.endswith(']') and i < 4:  # 我默认你只有4行注释，且首行字幕不是空行
-            if len(line) <= 6:
-                # 行长度不大于6时，归为元数据
+        if line.startswith('[') and line.endswith(']') and i < 4 and len(line) > 6:  # 我默认你只有4行注释，且首行字幕不是空行
+            if line[3] != ':' or line[6] != '.':
                 key, value = line[1:-1].split(':', 1)
                 metadata_main[key.strip()] = value.strip()
-                i += 1
-                break
-            elif len(line) > 6 and line[3] != ':' and line[6] != '.':
-                # 解析元数据
-                key, value = line[1:-1].split(':', 1)
-                metadata_main[key.strip()] = value.strip()
-                i += 1
-        elif line:
+                i += 1 
+        elif line.startswith('[') and line.endswith(']') and i < 4 and len(line) <= 6:
+            key, value = line[1:-1].split(':', 1)
+            metadata_main[key.strip()] = value.strip()
+            i += 1
+        elif line.startswith('['):
             # 解析歌词时间轴和文本内容
             timestamp, text = line.split(']', 1)
             timestamp = timestamp[1:]
