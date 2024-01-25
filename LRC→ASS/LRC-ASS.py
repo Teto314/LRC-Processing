@@ -63,8 +63,7 @@ def parse_lrc_content(lrc_content_input):
     i = 0
     for line in lines:
         line = line.strip()  # 去除行首尾的空白字符
-        if line.startswith('[') and line.endswith(']') and (
-                line[3] != ':' or line[6] != '.') and i < 4:  # 我默认你只有4行注释，且首行字幕不是空行
+        if line.startswith('[') and line.endswith(']') and (len(line) > 6 and line[3] != ':' or len(line) > 6 and line[6] != '.') and i < 4:  # 我默认你只有4行注释，且首行字幕不是空行
             # 解析元数据
             key, value = line[1:-1].split(':', 1)
             metadata_main[key.strip()] = value.strip()
